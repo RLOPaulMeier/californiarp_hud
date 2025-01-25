@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#hud {
+    position: absolute;
+    top: 81%;
+    left: 16%;
+    width: auto;
+    color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 18px;
+
+    text-align: left;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    background-image: url('icons/player.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; /* Sicherstellen, dass die Größe gleich bleibt */
+}
+
+
+
+
+
+.icon-money {
+    width: 30px;
+    height: 30px;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+	background-image: url('icons/money.png');
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;  /* Verhindert das Wiederholen des Bildes */
+}
+
+.icon-eat {
+    width: 30px;
+    height: 30px;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+	background-image: url('icons/eat.png');
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;  /* Verhindert das Wiederholen des Bildes */
+}
+
+.icon-drink {
+    width: 30px;
+    height: 30px;
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+	background-image: url('icons/drink.png');
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;  /* Verhindert das Wiederholen des Bildes */
+}
+
+.job-icon {
+    background-image: url('icons/default.png'); /* Platzhalter für dynamische Symbole */
+    background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;  /* Verhindert das Wiederholen des Bildes */
+}
+
+.row.talking .icon {
+    outline: 2px solid white; /* Weißer Rahmen beim Sprechen */
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+}
+
+.bar-container {
+    width: 170px; /* Etwas kleinere Breite */
+    height: 15px; /* Etwas kleinere Höhe */
+    background: rgba(50, 50, 50, 0.7); /* Hintergrund des Balkens */
+    border-radius: 5px; /* Leicht abgerundete Ecken */
+    overflow: hidden;
+    position: relative;
+}
+
+
+.bar {
+    height: 100%;
+    transition: width 0.2s ease;
+}
+
+.bar.hunger {
+    background: lightgray; /* Farbe für Essen */
+    width: 100%; /* Anfangswerte (100%) */
+}
+
+.bar.thirst {
+    background: lightblue; /* Farbe für Trinken */
+    width: 100%; /* Anfangswerte (100%) */
+}
+
+.id {
+    margin-right: 10px; /* Abstand zwischen ID und | */
+}
+
+.plz {
+    margin-left: 10px; /* Abstand zwischen | und PLZ */
+}
+
+/* Anpassung für 2560x1080p Widescreen */
+@media screen and (min-aspect-ratio: 21/9) {
+    #hud {
+        top: 81%; /* Optional: Position für Widescreen */
+        left: 25%; /* HUD nach links anpassen */
+    }
+
+    .bar-container {
+        width: 200px; /* Balken für größere Bildschirme anpassen */
+    }
+
+    .row {
+        font-size: 20px; /* Schriftgröße für größere Auflösungen anpassen */
+    }
+}

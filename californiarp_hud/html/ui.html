@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HUD</title>
+</head>
+<body>
+    <div id="hud">
+        <!-- ID und PLZ -->
+        <div class="row">
+            <div class="icon"></div>
+            <span class="id">ID 454</span> | <span class="plz">PLZ 5000</span>
+        </div>
+        <!-- Bargeld -->
+        <div class="row">
+            <div class="icon-money"></div>
+            <span>$11333</span>
+        </div>
+        <!-- Job -->
+        <div class="row">
+            <div class="icon job-icon"></div>
+            <span class="job">Lieutenant II</span>
+        </div>
+        <!-- Essen -->
+        <div class="row bar-row">
+			<div class="icon-eat"></div>
+            <div class="bar-container">
+                <div class="bar hunger"></div>
+            </div>
+        </div>
+        <!-- Trinken -->
+        <div class="row bar-row">
+			<div class="icon-drink"></div>
+            <div class="bar-container">
+                <div class="bar thirst"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
